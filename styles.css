@@ -1,0 +1,116 @@
+body {
+  background-color: #3C3C3C;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 28px 300px;
+  text-decoration: none;
+  
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #666;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: purple;
+  color: white;
+}
+/* */
+
+.name-text {
+  text-align: center;
+  color: white;
+  padding: 0px;
+  font-size: 200px;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: .75s;
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {color: purple;}
+  to {color: white;}
+}
+
+.name-text span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 1s;
+}
+
+.name-text:hover span {
+  padding-top: 0px;
+  color: purple;
+}
+
+.name-text:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
