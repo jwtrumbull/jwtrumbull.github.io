@@ -91,7 +91,7 @@ html, body {
 
 #menuToggle input
 {
-  display: block;
+  display: hidden;
   width: 40px;
   height: 32px;
   position: absolute;
