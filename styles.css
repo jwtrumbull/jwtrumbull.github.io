@@ -72,8 +72,13 @@
  * Help from: https://codepen.io/erikterwan/pen/grOZxx
  */
 
-html {
+body {
 	overflow-x: hidden;
+}
+ 
+body.noscroll{
+    position: fixed;
+    overflow: hidden;
 }
 
 #menuToggle
