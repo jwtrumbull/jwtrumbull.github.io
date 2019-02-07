@@ -74,12 +74,9 @@
 
 body {
 	overflow-x: hidden;
+	overscroll-behavior: contain;
 }
  
-body.noscroll{
-    position: fixed;
-    overflow: hidden;
-}
 
 #menuToggle
 {
