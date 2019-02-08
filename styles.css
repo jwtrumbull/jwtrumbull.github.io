@@ -1,5 +1,6 @@
 /* Navbar */
 .navbar {
+  overflow: hidden;
   background-color: #171728;
   position: sticky;
   position: -webkit-sticky;
@@ -9,6 +10,7 @@
 
 /* Style the navigation bar links */
 .navbar a {
+  float: left;
   display: block;
   color: white;
   text-align: center;
@@ -17,14 +19,10 @@
   font-size: 22px;
 }
 
-.left a {
-	float: left;
-}
-
 /* Change color on hover */
 .navbar a:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 /* Active/current link */
@@ -68,53 +66,3 @@
   opacity: 1;
   right: 0;
 }
-
-/* All new hamburger dropdown */
-
-.dropbtn {
-  float: right;
-
-  background-color: #171728;
-  color: white;
-  border: none;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  padding: 15px 40px;
-  font-size: 30px;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: black;
-  float: right;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 80px;
-}
-
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #171728;
-  min-width: 160px;
-  overflow: auto;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: black;}
-
-.show {display: block;}
-
-button:focus {outline:0;}
