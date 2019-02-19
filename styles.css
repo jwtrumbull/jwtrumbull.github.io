@@ -17,6 +17,8 @@
   padding: 22px 40px;
   text-decoration: none;
   font-size: 22px;
+  font-family: Georgia;
+
 }
 
 /* Change color on hover */
@@ -38,10 +40,11 @@
   text-align: center;
   color: white;
   font-size: 200px;
-  padding: 160px;
+  padding: 10px;
   animation-name: example;
   animation-duration: 2s;
   opacity: 0.7;
+  font-family: Georgia;
 }
 
 /* Standard syntax */
@@ -66,3 +69,41 @@
   opacity: 1;
   right: 0;
 }
+
+.dropbtn {
+  background-color: #171728;
+  color: white;
+  padding: 22px;
+  font-size: 22px;
+  border: none;
+  font-family: Georgia;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 140px;
+  float: right;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #171728;
+  min-width: 60px;
+
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 16px 30px;
+  display: block;
+  text-decoration: none;
+}
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: white; color: black;}
+

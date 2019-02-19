@@ -1,0 +1,34 @@
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  opacity: 0.5;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 22px 40px;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: Georgia;
+
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  //background-color: purple;
+  color: white;
+}
