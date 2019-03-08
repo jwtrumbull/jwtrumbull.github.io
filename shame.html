@@ -3,13 +3,98 @@
 <body>
 	<style>
 body {
-  background: #171728 url("tenor1.gif") no-repeat fixed center; 
+  background-color: #171728; 
+  background-image: url("tenor1.gif");
+  background-repeat: no-repeat;
+  background-position: center 230px;
+  color: white;
+
+}
+.button {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  cursor: pointer;
+  position:absolute;
+  top: 15%;
+  left: 42%;
+}
+
+#content {
+  text-align: left;
+  background-color: #171728;
+  display: none;
+  font-size: 18px;
+  position: absolute;
+  left:0px;
+  top: 86px;
+  width: 100%;
 }
 </style>
 <link rel="stylesheet" href="styles.css">
 
+
 <div class="navbar">
   	<a href="index.html">Home</a>
+    <div class="dropdown">
+    <button class="dropbtn" id="toggle">Shamefulbot info</button>
+  </div>
+</div>
+
+<a href="https://discordapp.com/oauth2/authorize?client_id=455586839089381386&scope=bot&permissions=0" class="button">Invite ShamefulBot</a>
+
+<div id="content">
+  <p>
+    Message listeners: <br>
+    g2: bot responds with its love for G2 <br>
+    kun: bot responds with :open_mouth: <br>
+    <br>
+    Commands: <br>
+    !help:        Lists all commands <br>
+    !cookie:      Mmmmm cookie <br>
+    !bye:         Says bye <br>
+    !repeat:      Repeats whatever is after the command <br>
+    !smile:       Smiles <br>
+    !ping:        Pings the chat and the terminal <br>
+    !info:        Shows a users name, id, status, role, date joined, and waifu <br>
+    !rl:          Sends a messgae to the user to play Rocket League <br>
+    !annoy:       Sends an annoying message to the user <br>
+    !embed:       Used as a refernce for embedding things <br>
+    !poke:        Pokes the user <br>
+    !join:        Bot joins your current channel <br>
+    !leave:       Bot leaves current channel <br>
+    !waifu:       Shows the user's Waifu UwU <br> 
+    !rem:         Shows a random picture of Rem <br>
+    !randomWaifu: Displays a picture of a random Waifu <br>
+    !tets:        Tester function, don't worry about it <br>
+    <br>
+    Commands under work: <br>
+    !setWaifu:    Set your waifu, not working yet... <br>
+    !clear:       Clears the chat channel, not working yet... <br>
+    <br>
+    Below are the commands for the YouTube audio player that does not work on the server I made, but works when I run it off of my computer: <br>
+    !play:        Plays the given url or adds it to the queue <br>
+    !pause:       Pauses the current thing playing <br>
+    !stop:        Pauses the current thing playing and empties queue <br>
+    !resume:      Resumes current item in queue <br>
+    !skip:        Go to next item in queue, not working yet... <br>
+    !queue:       Plays the given url or adds it to the queue <br>
+  <p>
+</div>
+
+<script>
+var toggle  = document.getElementById("toggle");
+var content = document.getElementById("content");
+
+toggle.addEventListener("click", function() {
+  content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
+});
+</script>
 
 </body>
 </html>

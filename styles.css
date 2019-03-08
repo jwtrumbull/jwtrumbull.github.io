@@ -16,7 +16,7 @@
   text-align: center;
   padding: 22px 40px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 28px;
   font-family: Georgia;
 
 }
@@ -74,7 +74,7 @@
   background-color: #171728;
   color: white;
   padding: 22px;
-  font-size: 22px;
+  font-size: 28px;
   border: none;
   font-family: Georgia;
 
@@ -85,6 +85,7 @@
   display: inline-block;
   padding-bottom: 140px;
   float: right;
+
 }
 
 .dropdown-content {
@@ -92,6 +93,7 @@
   position: absolute;
   background-color: #171728;
   min-width: 60px;
+
 
 }
 
