@@ -2,7 +2,7 @@
 
 You can access this website by either visiting:
 
-[jordantrumbull.com](jordantrumbull.com)
+[jordantrumbull.com](http://jordantrumbull.com)
 
 or
 
