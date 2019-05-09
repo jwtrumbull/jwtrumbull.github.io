@@ -19,6 +19,4 @@ function App() {
 	return (
 		<h1 style={{color:red, backgroundColor: blue}}>Good {timeOfDay}!</h1>
 	)
-}
-
-ReactDOM.render(<App />, document.getElementById("root"))
+};
