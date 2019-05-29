@@ -6,14 +6,84 @@
 }
 
 .head{
-	font-size: 140px;
-	text-align: center;
+	font-size: 120px;
+	text-align: left;
 }
 
-#demo {
-	position: absolute;
-	top: 30%;
-	left: 40%;
-	width:500px;
-	height:500px;
+
+body {
+  background-color: orange;
+  background-repeat: no-repeat;
+  background-position: center 230px;
+  color: black;
+
 }
+
+#content {
+  text-align: left;
+	color: black;
+  background-color: orange;
+  display: none;
+  font-size: 40px;
+  position: absolute;
+  left: 5px;
+  top: 86px;
+  width: 90%;
+}
+
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  background-color: orange;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 22px 40px;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: Georgia;
+
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  //background-color: purple;
+  color: white;
+}
+.dropbtn {
+  background-color: orange;
+  color: black;
+  padding: 22px;
+  font-size: 28px;
+  border: none;
+  font-family: Georgia;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0px;
+  float: right;
+
+}
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: white; color: black;}
