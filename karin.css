@@ -1,0 +1,19 @@
+
+#myCanvas {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+}
+
+.head{
+	font-size: 140px;
+	text-align: center;
+}
+
+#demo {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	width:500px;
+	height:500px;
+}
