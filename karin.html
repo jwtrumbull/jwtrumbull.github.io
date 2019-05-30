@@ -19,16 +19,28 @@
 </style>
 	<link rel="stylesheet" href="karin.css">
 
-	<input type='file' class="upload">
+	<input type='file' class="upload" onclick="disappear()">
 
 
 <canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 
+<p name ="text" id="text">Your image will be here.</p>
+
 
 
 <script>
+function disappear() {
+  var x = document.getElementById("text");
+  if (x.innerHTML === "Your image will be here.") {
+    x.innerHTML = "";
+  } else {
+    x.innerHTML = "";
+  }
+}
+
+
 $("input").change(function(e) {
 
     for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
@@ -71,7 +83,8 @@ $("input").change(function(e) {
 		1. Click on choose file, and select the image from your desktop.<br>
 		2. Your image will go into the box and will be overlayed with an orange heart.<br>
 		3. Right click on the image in the box and click save image as...<br>
-		4. The image saved will be a bit more colored than the image in the box so make sure you check it.<br>
+		4. The image saved will be a bit more colored than the image in the box so make sure you check it.<br><br>
+		The picture will convert your image to 500x500 to match the size of the heart. I am looking into other resizing methods to make it look better.
 		<br><br><br><br><br><br><br><br><br><br>
 	<p>
 </div>
