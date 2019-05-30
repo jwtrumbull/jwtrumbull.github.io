@@ -36,10 +36,15 @@ $("input").change(function(e) {
 
         var img = document.createElement("img");
         var reader = new FileReader();
+
         reader.onloadend = function() {
              img.src = reader.result;
         }
         reader.readAsDataURL(file);
+
+				var width = img.width;
+			 	var height = img.height;
+			 	//alert(this.width + 'x' + this.height);
 
 				var c=document.getElementById("myCanvas");
 				var ctx=c.getContext("2d");
@@ -55,6 +60,7 @@ $("input").change(function(e) {
 				      var img = c.toDataURL("image/png");
 							document.getElementById("myImg") = img;
 				   }
+
 				};
     }
 });
