@@ -3,6 +3,7 @@
 	position: absolute;
 	top: 30%;
 	left: 40%;
+	border: 2px solid;
 }
 
 .head{
@@ -10,19 +11,14 @@
 	text-align: center;
 }
 
-
 body {
-  background-color: orange;
-  background-repeat: no-repeat;
-  background-position: center 230px;
-  color: black;
-
+	background: linear-gradient(to left top, orangered, darkorange) fixed;
 }
 
 #content {
   text-align: left;
 	color: black;
-  background-color: orange;
+  background-color: darkorange;
   display: none;
   font-size: 40px;
   position: absolute;
@@ -38,10 +34,24 @@ body {
 	font-size: 40px;
 }
 
+.download {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.download:hover {
+  background-color: orange;
+}
+
 /* Navbar */
 .navbar {
   overflow: hidden;
-  background-color: orange;
+  background-color: darkorange;
   position: fixed;
   position: -webkit-sticky;
   top: 0;
@@ -73,7 +83,7 @@ body {
   color: white;
 }
 .dropbtn {
-  background-color: orange;
+  background-color: darkorange;
   color: black;
   padding: 22px;
   font-size: 28px;

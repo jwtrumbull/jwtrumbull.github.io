@@ -12,7 +12,7 @@
 </div>
 <h1 class="head">Fearless Scoot</h1>
 </head>
-<body style="background-color:orange">
+<body>
 	<style>
   article, aside, figure, footer, header, hgroup,
   menu, nav, section { display: block; }
@@ -22,13 +22,14 @@
 	<input type='file' class="upload" onclick="disappear()">
 
 
-<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="500" height="500">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
 
 <p name ="text" id="text">Your image will be here.</p>
 
-
+<!--<button class="download"><i class="fa fa-download"></i> Download</button>
+-->
 
 <script>
 function disappear() {
@@ -38,7 +39,7 @@ function disappear() {
   } else {
     x.innerHTML = "";
   }
-}
+};
 
 
 $("input").change(function(e) {
@@ -71,6 +72,11 @@ $("input").change(function(e) {
 				      ctx.drawImage(imageObj2, 0, 0, 500, 500);
 				      var img = c.toDataURL("image/png");
 							document.getElementById("myImg") = img;
+							var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
 				   }
 
 				};
