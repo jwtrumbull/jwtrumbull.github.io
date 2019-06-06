@@ -28,58 +28,109 @@ Your browser does not support the HTML5 canvas tag.
 
 <p name ="text" id="text">Your image will be here.</p>
 
-<!--<button class="download"><i class="fa fa-download"></i> Download</button>
+<!-- Hide this from deploy version, this is to test other functions -->
+<!--
+
+<p><button onclick="myFunction()">Click Me</button></p>
+<img id="myDIV"></img>
+
 -->
 
+
+
 <script>
+
+//Acting as global variables
+var img = "";
+var width = 0;
+var height = 0;
+
+// To test the functionality of getting width and height
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  x.src = img.src;
+	window.alert(width + "x" + height);
+}
+
 function disappear() {
   var x = document.getElementById("text");
   if (x.innerHTML === "Your image will be here.") {
     x.innerHTML = "";
-  } else {
-    x.innerHTML = "";
   }
 };
-
 
 $("input").change(function(e) {
 
     for (var i = 0; i < e.originalEvent.srcElement.files.length; i++) {
         var file = e.originalEvent.srcElement.files[i];
 
-        var img = document.createElement("img");
-        var reader = new FileReader();
+        img = document.createElement("img");
 
+				//read the choose file
+        var reader = new FileReader();
         reader.onloadend = function() {
              img.src = reader.result;
         }
         reader.readAsDataURL(file);
 
-				var width = img.width;
-			 	var height = img.height;
-			 	//alert(this.width + 'x' + this.height);
-
+				//Get Canvas from HTML
 				var c=document.getElementById("myCanvas");
 				var ctx=c.getContext("2d");
+
+				//Create the image types
 				var imageObj1 = new Image();
 				var imageObj2 = new Image();
-				imageObj1.src = "heart.png"
-				imageObj1.onload = function() {
-				   ctx.drawImage(imageObj1, 0, 0, 500, 500);
-				   imageObj2.src = img.src;
-				   imageObj2.onload = function() {
-						ctx.globalAlpha = 0.5;
-				      ctx.drawImage(imageObj2, 0, 0, 500, 500);
-				      var img = c.toDataURL("image/png");
-							document.getElementById("myImg") = img;
-							var button = document.getElementById('btn-download');
-button.addEventListener('click', function (e) {
-    var dataURL = canvas.toDataURL('image/png');
-    button.href = dataURL;
-});
-				   }
 
-				};
+				//heart.png is the file that will overlay
+				imageObj1.src = "heart.png"
+
+				imageObj1.onload = function() {
+				   imageObj2.src = img.src;
+
+					 //Get width and height of chosen file
+					 width = imageObj2.width;
+					 height = imageObj2.height;
+
+					 //Establish variables to scale images
+					 var x = "";
+					 var y = "";
+
+					 //If width is too big scale it to be 500 and make height scale appropriately
+					 if (width > 500)
+					 {
+						 x = width / 500;
+						 width = width/x;
+						 height = height/x;
+					 }
+
+					 //Same thing for the height
+					 if (height > 500)
+					 {
+						 y = height / 500;
+
+						 width = width/y;
+						 height = height/y;
+					 }
+
+					 //Set the canvas border to the width and height
+					 document.getElementById("myCanvas").width = width;
+					 document.getElementById("myCanvas").height = height;
+
+					 //Draw the heart, must be done after we get the width and height of the user's image
+					 ctx.drawImage(imageObj1, 0, 0, width, height);
+
+
+				   imageObj2.onload = function() {
+						 //Sets the heart to be opaque
+						 ctx.globalAlpha = 0.5;
+
+						 //Draws the user's image
+				     ctx.drawImage(imageObj2, 0, 0, width, height);
+
+						 //Set the image to a varbaible for later use
+				     var img = c.toDataURL("image/jpg");
+				   }
+				}
     }
 });
 </script>
@@ -90,8 +141,14 @@ button.addEventListener('click', function (e) {
 		2. Your image will go into the box and will be overlayed with an orange heart.<br>
 		3. Right click on the image in the box and click save image as...<br>
 		4. The image saved will be a bit more colored than the image in the box so make sure you check it.<br><br>
-		The picture will convert your image to 500x500 to match the size of the heart. I am looking into other resizing methods to make it look better.
-		<br><br><br><br><br><br><br><br><br><br>
+		Now copies the resolution of your image resolution!<br><br>
+		Reason for not all pictures working: <br>
+		1. File resolutions too large. <br>
+		2. File size too large. <br>
+		3. There's probably a few more lets be real.<br> <br>
+		I am looking into fixing these or finding a work around for them. <br>
+		Let me know if there are any other features I should add or if you have any issues.
+		<br><br><br><br><br><br><br><br>
 	<p>
 </div>
 
