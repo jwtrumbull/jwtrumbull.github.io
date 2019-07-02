@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<link rel="stylesheet" href="poefilter.css">
+
+<div class="navbar">
+  	<a href="index.html">Home</a>
+    <div class="dropdown">
+    <button class="dropbtn" id="toggle">Click me for infomation</button>
+  </div>
+</div>
+
+<a href="images/3.7 Filter.zip" download>
+  <img src="images/download.png" class="download">
+</a>
+
+<div class="name-text">
+	<span>Click button to download PoE filter</span>
+</div>
+
+<div class="name-text2">
+	<span>3.7 Ready!</span>
+</div>
+
+<div id="content">
+  <p>
+    Drop the .filter file along with all of the other .mp3 files into your
+    Documents\My Games\Path of Exile file.<br>
+<br>
+    Then in Path of Exile go to options -> UI and scroll all the way to the bottom.<br>
+    Click the option List of Item Filters and select the name of the filter and click save.<br>
+<br>
+If you are having issues check out my YouTube channel at https://www.youtube.com/user/ShamefulPenguin for help.
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p>
+</div>
+
+<script>
+var toggle  = document.getElementById("toggle");
+var content = document.getElementById("content");
+
+toggle.addEventListener("click", function() {
+  content.style.display = (content.dataset.toggled ^= 1) ? "block" : "none";
+});
+</script>
+
+</body>
+</html>
