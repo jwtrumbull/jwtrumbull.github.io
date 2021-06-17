@@ -8,6 +8,4 @@ or
 
 [jwtrumbull.github.io](http://jwtrumbull.github.io)
 
-
-The purpose of this website is to learn and act as my software portfolio. 
-
+The purpose of this website is to learn and act as my software portfolio.
